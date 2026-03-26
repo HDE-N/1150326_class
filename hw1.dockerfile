@@ -9,9 +9,9 @@ arg root_dir=/app
 env root=${root_dir} \
     pythonencoding=utf-8
 
-copy requirements.txt ${root_dir}/requirements
+copy requirements.txt ${root_dir}/requirements.txt
 
-run pip3 install -r requirements.txt
+run pip3 install --no-cache-dir -r requirements.txt
 
 run mkdir -p "${root_dir}/src/static/config" && \
     mkdir -p "${root_dir}/src/static/data"
