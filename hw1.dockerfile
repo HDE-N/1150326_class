@@ -20,4 +20,6 @@ copy src/*.py ${root_dir}/src/
 
 workdir /app
 
+expose 5000
+
 cmd python3 src/app.py
